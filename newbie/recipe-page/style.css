@@ -1,0 +1,135 @@
+/* Fonts */
+
+@font-face {
+    font-family: "YoungSerif-Regular";
+    src: url("fonts/YoungSerif-Regular.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit-ExtraLight";
+    src: url("fonts/Outfit-ExtraLight.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Outfit-SemiBold";
+    src: url("fonts/Outfit-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: "Outfit-ExtraLight", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "YoungSerif-Regular";
+    margin: 0;
+}
+
+h2, table tr td:nth-child(2) {
+    color: hsl(21, 54%, 42%);
+}
+
+
+/* Styles */
+
+body {
+    background-color: hsl(30, 18%, 87%);
+}
+
+main {
+    width: 40%;
+    margin: 20vh auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.preparation {
+    background-color: hsl(330, 100%, 98%);
+    padding: 30px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.preparation ul {
+    margin: 0;
+}
+
+.preparation h3 {
+    color: hsl(332, 51%, 32%);
+    margin: 0;
+}
+
+.preparation li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+.bold {
+    font-family: "Outfit-SemiBold", sans-serif;
+}
+
+.ingredients li::marker, .instructions li::marker {
+    color: hsl(21, 54%, 42%);
+}
+
+li {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+hr {
+    margin: 40px 0;
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 20px 0;
+}
+
+table tr:not(:last-child) td {
+    border-bottom: 1px solid lightgray;
+}
+
+table tr td:nth-child(2) {
+    font-family: "YoungSerif-Regular", sans-serif;
+    color: hsl(21, 54%, 42%);
+}
+
+@media screen and (width <= 600px) {
+    main {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    img {
+        border-radius: 0;
+    }
+
+    main > :not(:first-child) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
