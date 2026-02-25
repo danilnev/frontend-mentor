@@ -1,0 +1,122 @@
+/* Colors */
+
+:root {
+    --blue-500: hsl(215, 51%, 70%);
+    --cyan-400: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+}
+
+/* Styles */
+
+html, body, main {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: var(--main-bg);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 450px;
+    padding: 25px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+}
+
+.content .main-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.content .main-image {
+    background-color: var(--cyan-400);
+    border-radius: 25px;
+    padding: 0;
+    margin: 0;
+    background-image: url("images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content .main-image img:hover {
+    opacity: 0.5;
+}
+
+.content h1:hover {
+    color: var(--cyan-400)
+}
+
+.content p:first-of-type {
+    color: var(--blue-500);
+}
+
+.content div:nth-of-type(2) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content div:nth-of-type(2) div:nth-of-type(2) {
+    color: var(--blue-500);
+    gap: 5px;
+    align-items: center;
+    margin: 0;
+}
+
+.content div:nth-of-type(2) div:first-of-type {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.content div:nth-of-type(2) div:first-of-type p {
+    color: var(--cyan-400);
+    font-weight: bold;
+}
+
+.content div:nth-of-type(2) div:first-of-type img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.content hr {
+    border: none;
+    background-color: var(--blue-500);
+    height: 1px;
+    width: 100%;
+}
+
+.content div:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--blue-500);
+    margin-top: 15px;
+}
+
+.content div:nth-of-type(3) img {
+    max-width: 15%;
+}
+
+.content div:nth-of-type(3) span:hover {
+    color: var(--cyan-400);
+}
+
+@media screen and (width <= 550px) {
+    .content {
+        width: 80%;
+    }
+}
