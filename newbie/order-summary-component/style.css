@@ -1,0 +1,182 @@
+/* Colors */
+
+:root {
+    --blue-100: hsl(225, 100%, 94%);
+    --blue-700: hsl(245, 75%, 52%);
+    --blue-50: hsl(225, 100%, 98%);
+    --gray-600: hsl(224, 23%, 55%);
+    --blue-950: hsl(223, 47%, 23%);
+}
+
+/* Fonts */
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Styles */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    background-color: var(--blue-100);
+}
+
+body p {
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    width: 30%;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.content > img {
+    width: 100%;
+}
+
+.component-content {
+    margin: 0;
+    padding: 0 50px 25px 50px;
+    text-align: center;
+}
+
+.component-content > p {
+    color: var(--gray-600);
+}
+
+.component-content div {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "img order-name link"
+        "img order-cost link";
+    background-color: var(--blue-50);
+    border-radius: 15px;
+    padding: 10px 20px;
+    column-gap: 10px;
+}
+
+.component-content div .img {
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.component-content div .img img {
+    width: 100%;
+    height: auto;
+}
+
+.component-content div p {
+    text-align: left;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.component-content div .order-name {
+    grid-area: order-name;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.component-content div .order-cost {
+    grid-area: order-cost;
+    color: var(--gray-600);
+    padding-bottom: 10px;
+}
+
+.component-content div a {
+    grid-area: link;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: var(--blue-700);
+    padding-right: 20px;
+    text-decoration: underline;
+}
+
+.component-content div a:hover {
+    text-decoration: none;
+}
+
+.component-content > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85em;
+}
+
+.component-content > a:nth-of-type(1) {
+    background-color: var(--blue-700);
+    margin-top: 30px;
+    color: white;
+}
+
+.component-content > a:nth-of-type(1):hover {
+    background-color: hsl(245, 100%, 74%);
+}
+
+.component-content > a:nth-of-type(2) {
+    color: var(--gray-600);
+    width: 30%;
+    margin: auto;
+}
+
+.component-content > a:nth-of-type(2):hover {
+    color: black;
+}
+
+@media screen and (width <= 1400px) {
+    .content {
+        width: 50%;
+    }
+}
+
+@media screen and (width <= 850px) {
+    .content {
+        width: 85%;
+    }
+}
+
+@media screen and (width <= 550px) {
+    .component-content {
+        padding: 15px;
+    }
+
+    .component-content div {
+        padding: 10px 10px;
+    }
+}
