@@ -1,0 +1,130 @@
+/* Colors */
+
+:root {
+    --first-column: hsl(31, 77%, 52%);
+    --second-column: hsl(184, 100%, 22%);
+    --third-column: hsl(179, 100%, 13%);
+}
+
+/* Styles */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+main {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+}
+
+main h2 {
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-size: 3em;
+    font-family: "Big Shoulders", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+main p {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+main .content {
+    width: 60%;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+main .content > div {
+    padding: 50px;
+}
+
+main .content > div:nth-of-type(1) {
+    background-color: var(--first-column);
+}
+
+main .content > div:nth-of-type(2) {
+    background-color: var(--second-column);
+}
+
+main .content > div:nth-of-type(3) {
+    background-color: var(--third-column);
+}
+
+main .content > div p {
+    height: 200px;
+}
+
+main .content > div  a {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: auto;
+    background-color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+main .content > div:nth-of-type(1) a {
+    color: var(--first-column);
+}
+
+main .content > div:nth-of-type(2) a {
+    color: var(--second-column);
+}
+
+main .content > div:nth-of-type(3) a {
+    color: var(--third-column);
+}
+
+main .content > div a:hover {
+    color: hsl(0, 0%, 95%);
+    background: none;
+}
+
+@media screen and (width <= 1300px) {
+    main .content {
+        width: 80%;
+    }
+}
+
+@media screen and (width <= 950px) {
+    main .content {
+        width: 95%;
+    }
+}
+
+@media screen and (width <= 800px) {
+    main .content {
+        flex-direction: column;
+        margin-top: 20vh;
+    }
+
+    main .content > div p {
+        height: 100px;
+    }
+}
