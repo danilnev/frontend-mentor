@@ -1,0 +1,323 @@
+/* Fonts */
+
+@font-face {
+    font-family: "DMSans-Medium";
+    src: url("fonts/DMSans-Medium.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "DMSans-MediumItalic";
+    src: url("fonts/DMSans-MediumItalic.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "DMSans-Regular";
+    src: url("fonts/DMSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+/* Colors */
+
+:root {
+    --purple-100: hsl(254, 88%, 90%);
+    --purple-500: hsl(256, 67%, 59%);
+    --yellow-100: hsl(31, 66%, 93%);
+    --yellow-500: hsl(39, 100%, 71%);
+    --black: hsl(0, 0%, 7%);
+}
+
+/* Styles */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "DMSans-Medium", sans-serif;
+    font-weight: 400;
+    background-color: rgb(229, 229, 229);
+}
+
+body p {
+    font-size: 18px;
+}
+
+body img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    max-height: 90%;
+}
+
+.content {
+    width: 80%;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+        "first second second third"
+        "first second second third"
+        "first fourth fives third"
+        "six fourth fives third"
+        "six seven eight eight"
+        "six seven eight eight";
+
+    gap: 20px;
+}
+
+div.content div.grid-item {
+    border-radius: 10px;
+    padding: 30px;
+    letter-spacing: -1px;
+    overflow: hidden;
+}
+
+/* First div */
+
+div.content div.grid-item:nth-of-type(1) {
+    grid-area: first;
+    background-color: var(--yellow-100);
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.content div.grid-item:nth-of-type(1) span {
+    color: var(--purple-500);
+    font-family: "DMSans-MediumItalic", sans-serif;
+}
+
+div.content div.grid-item:nth-of-type(1) > img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Second div */
+
+div.content div.grid-item:nth-of-type(2) {
+    grid-area: second;
+    background-color: var(--purple-500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+div.content div.grid-item:nth-of-type(2) > h2 {
+    font-size: 3em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+div.content div.grid-item:nth-of-type(2) > img {
+    width: 30%;
+}
+
+div.content div.grid-item:nth-of-type(2) span:nth-of-type(1) {
+    color: var(--yellow-500);
+}
+
+div.content div.grid-item:nth-of-type(2) span:nth-of-type(2) {
+    font-family: "DMSans-MediumItalic", sans-serif;
+}
+
+/* Third div */
+
+div.content div.grid-item:nth-of-type(3) {
+    grid-area: third;
+    background-color: var(--purple-100);
+    overflow: hidden;
+}
+
+div.content div.grid-item:nth-of-type(3) > h2 {
+    font-size: 2em;
+}
+
+div.content div.grid-item:nth-of-type(3) > img {
+    max-width: none;
+    max-height: 50%;
+    width: 120%;
+}
+
+div.content div.grid-item:nth-of-type(3) > p {
+    font-size: 0.95em;
+}
+
+/* Fourth div */
+
+div.content div.grid-item:nth-of-type(4) {
+    grid-area: fourth;
+    background-color: white;
+    overflow: hidden;
+    font-size: 1em;
+}
+
+div.content div.grid-item:nth-of-type(4) > img {
+    max-width: none;
+    width: 150%;
+}
+
+/* Fives div */
+
+div.content div.grid-item:nth-of-type(5) {
+    grid-area: fives;
+    background-color: var(--yellow-500);
+    overflow: hidden;
+}
+
+div.content div.grid-item:nth-of-type(5) > h2 {
+    font-size: 1.5em;
+}
+
+/* Six div */
+
+div.content div.grid-item:nth-of-type(6) {
+    grid-area: six;
+    background-color: var(--yellow-500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+div.content div.grid-item:nth-of-type(6) > img {
+    width: 80%;
+}
+
+div.content div.grid-item:nth-of-type(6) > h2 {
+    margin-top: 0;
+}
+
+/* Seven div */
+
+div.content div.grid-item:nth-of-type(7) {
+    grid-area: seven;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.content div.grid-item:nth-of-type(7) > h2 {
+    font-size: 4em;
+    margin: 0;
+    width: 100%;
+}
+
+div.content div.grid-item:nth-of-type(7) > p {
+    width: 100%;
+    margin-top: 0;
+}
+
+div.content div.grid-item:nth-of-type(7) > img {
+    max-height: 30%;
+}
+
+/* Eight div */
+
+div.content div.grid-item:nth-of-type(8) {
+    grid-area: eight;
+    background-color: var(--purple-500);
+    display: flex;
+    color: white;
+    font-size: 1.25em;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (width <= 1100px) {
+    div.content div.grid-item {
+        padding: 15px;
+    }
+
+    /* First div */
+    div.content div.grid-item:nth-of-type(1) {
+        font-size: 1em;
+    }
+
+    div.content div.grid-item:nth-of-type(1) > img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Second div */
+
+    div.content div.grid-item:nth-of-type(2) > h2 {
+        font-size: 1.5em;
+    }
+
+    div.content div.grid-item:nth-of-type(2) > img {
+        width: 50%;
+    }
+
+    /* Third div */
+
+    div.content div.grid-item:nth-of-type(3) > h2 {
+        font-size: 1.5em;
+    }
+
+    /* Six div */
+
+    div.content div.grid-item:nth-of-type(6) > img {
+        width: 100%;
+    }
+
+    /* Seven div */
+
+    div.content div.grid-item:nth-of-type(7) > h2 {
+        font-size: 2.5em;
+    }
+
+    /* Eight div */
+
+    div.content div.grid-item:nth-of-type(8) > img {
+        width: 30%;
+    }
+}
+
+@media screen and (width <= 800px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    main {
+        max-height: none;
+    }
+
+    body {
+        display: block;
+    }
+
+    div.content div.grid-item {
+        padding: 20px;
+    }
+
+    /* First div */
+
+    div.content div.grid-item:nth-of-type(1) img {
+        width: 30%;
+        margin: 0;
+    }
+}
